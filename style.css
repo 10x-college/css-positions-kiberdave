@@ -6,11 +6,43 @@
 
 body {
     font-family: "Kumbh Sans", sans-serif;
-    background-color: #0989B4;
+    background-color: #19a2ae;;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.bg-circle-left {
+    border-radius: 50%;
+    background-color: #19a2ae;
+    background: linear-gradient(135deg, #0989B400, #53FFEE);
+    opacity: 50%;
+    position: absolute;
+    z-index: -1;
+    top: -711.84px;
+    left: -486.84px;
+}
+
+.bg-circle-right {
+
+}
+
+.bg-circle-left, 
+.bg-circle-right {
+    position: fixed;
+    width: 978px;
+    height: 978px;
 }
 
 .user-card {
@@ -20,8 +52,9 @@ body {
     border: none;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 50 100px #08465E40;
+    box-shadow: 0 50px 100px #08465E40;
     position: relative;
+    z-index: 100;
 }
 
 .profile-background {
@@ -79,6 +112,7 @@ body {
 
 .user-city {
     font-size: 14px;
+    color: #6B7082;
     text-align: center;
     grid-column: 1 / 4;
     grid-row: 2;
@@ -111,6 +145,7 @@ body {
 .user-stats-type {
     font-size: 10px;
     font-weight: 400;
+    letter-spacing: 1.5px;
     color: #6B7082;
 }
 
